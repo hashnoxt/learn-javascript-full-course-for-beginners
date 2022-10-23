@@ -1,0 +1,23 @@
+const [z, x, , y] = [1,2,3,4,5,6];
+console.log(z,x,y);
+
+let a = 8, b = 6;
+
+(() => {
+    "use strict";
+    [a,b] = [b, a]
+})();
+
+console.log(a);
+console.log(b)
+
+const source = [1,2,3,4,5,6,7,8];
+
+function removeFirstTwo(list) {
+    const  [, , ...arr] = list;
+    return arr;
+}
+
+const arr = removeFirstTwo(source);
+console.log(arr); // no first two elements
+console.log(source);
